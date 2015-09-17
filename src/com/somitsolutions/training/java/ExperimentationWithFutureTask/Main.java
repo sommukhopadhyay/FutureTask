@@ -8,7 +8,12 @@ public class Main {
 		
 		ProductInfo pInfo = preloader.get();
 		
-		System.out.println(pInfo.getProductName());
-		System.out.print(pInfo.getProductPrice());
+		if (!preloader.cancel() == true){
+			System.out.println("The task has been cancelled...");
+		}
+		else{
+			System.out.println(pInfo.getProductName());
+			System.out.print(pInfo.getProductPrice());	
+		}
 	}
 }

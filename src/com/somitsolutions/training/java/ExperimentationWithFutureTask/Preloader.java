@@ -28,6 +28,10 @@ public class Preloader {
 			return retValue;
 		}
 		
+		public boolean cancel(){
+			return future.cancel(true);
+		}
+		
 		private final Thread thread = new Thread(future);
 		
 		public void start() { thread.start(); }
