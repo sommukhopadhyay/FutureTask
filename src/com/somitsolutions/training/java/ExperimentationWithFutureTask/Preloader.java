@@ -32,6 +32,10 @@ public class Preloader {
 			return future.cancel(true);
 		}
 		
+		public boolean isDone(){
+			return future.isDone();
+		}
+		
 		private final Thread thread = new Thread(future);
 		
 		public void start() { thread.start(); }
@@ -45,5 +49,7 @@ public class Preloader {
 			}
 			return new ProductInfo("ABC", 100);
 		}
+		
+		
 }
 
