@@ -15,6 +15,13 @@ public class Main {
 			} //sleep for 1 millisecond before checking again
 		}
 		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		ProductInfo pInfo = preloader.get();
 		
 		//This commented block shows how we can cancel a Future task
