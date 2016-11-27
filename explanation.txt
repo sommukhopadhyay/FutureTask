@@ -1,0 +1,6 @@
+The basic idea of this application is that whenever the 
+application starts we start a background thread and do the 
+long running task in the background. When the background task
+is going on we can do our normal task in the main thread.
+Then whenever we need the data, we can always get it 
+from the already fetched data
